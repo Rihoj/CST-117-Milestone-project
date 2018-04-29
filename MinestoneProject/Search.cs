@@ -10,27 +10,22 @@ using System.Windows.Forms;
 
 namespace MinestoneProject
 {
-    public partial class viewInventoryForm : Form
+    public partial class Search : Form
     {
-        public viewInventoryForm()
+        public Search()
         {
             InitializeComponent();
+        }
+
+        private void viewInventoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            viewInventoryForm viewInventory = new viewInventoryForm();
+            viewInventory.Show();
         }
 
         private void closeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void viewInventoryToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void searchInventoryToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Search searchForm = new Search();
-            searchForm.Show();
         }
 
         private void addItemToolStripMenuItem_Click(object sender, EventArgs e)
